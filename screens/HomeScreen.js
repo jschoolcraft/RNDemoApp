@@ -26,7 +26,8 @@ class HomeScreen extends React.Component {
             <Text style={styles.buttonText}
               onPress={() => this.props.navigation.navigate('BreathingIntro')}>Breathing</Text>
         
-            <Text style={styles.buttonText}>Muscles</Text>
+            <Text style={styles.buttonText}
+              onPress={() => this.props.navigation.navigate('MuscleIntro')}>Muscles</Text>
             <Text style={styles.buttonText}>Eyes</Text>
           </View>
       </ScrollView>
