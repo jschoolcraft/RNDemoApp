@@ -8,6 +8,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import BreathingIntroScreen from '../screens/BreathingIntroScreen';
 import MuscleIntroScreen from '../screens/MuscleIntroScreen';
+import TimedThingScreen from '../screens/TimedThingScreen';
 
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -22,6 +23,7 @@ const HomeStack = createStackNavigator(
     Home: HomeScreen,
     BreathingIntro: BreathingIntroScreen,
     MuscleIntro: MuscleIntroScreen,
+    TimedThing: TimedThingScreen,
   },
   {
     initialRouteName: 'Home',
