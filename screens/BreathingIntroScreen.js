@@ -9,12 +9,14 @@ import {
   View,
 } from 'react-native';
 
-export default function BreathingIntroScreen() {
-  return (
-    <View style={styles.container}>
-      <Text>Breathing Intro</Text>
-    </View>
-  )
+class BreathingIntroScreen extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Breathing Intro</Text>
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -23,3 +25,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#ccc',
   },
 })
+
+export default BreathingIntroScreen
