@@ -71,7 +71,9 @@ class TimedThingScreen extends React.Component {
   nextTick() {
     if (this.state.currentCycle >= maxCycles) {
       clearInterval(this.interval)
+      console.log('should navigate')
       this.props.navigation.navigate('Finished')
+      console.log('did navigate')
     } else {
       let timeOverall = this.state.timeOverall
       this.setState(previousState => (

@@ -10,6 +10,8 @@ import BreathingIntroScreen from '../screens/BreathingIntroScreen';
 import MuscleIntroScreen from '../screens/MuscleIntroScreen';
 import TimedThingScreen from '../screens/TimedThingScreen';
 
+import FinishedScreen from '../screens/FinishedScreen';
+
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
@@ -24,6 +26,7 @@ const HomeStack = createStackNavigator(
     BreathingIntro: BreathingIntroScreen,
     MuscleIntro: MuscleIntroScreen,
     TimedThing: TimedThingScreen,
+    Finished: FinishedScreen,
   },
   {
     initialRouteName: 'Home',
