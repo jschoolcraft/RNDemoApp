@@ -4,6 +4,7 @@ import {
   Image,
   Platform,
   ScrollView,
+  Slider,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -13,6 +14,13 @@ import {
 import { MonoText } from '../components/StyledText';
 
 class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      stressLevel: 1
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -22,7 +30,19 @@ class HomeScreen extends React.Component {
           <View style={styles.contentContainer}>
 
             <Text style={styles.welcomeText}>Some Words</Text>
-
+            <Text>Please estimate your current stress level.</Text>
+            <Text>1 as no stress, 10 as all the stress</Text>
+            <Text>current stress: {this.state.stressLevel}</Text>
+            <Slider
+              style={{width: 200, height: 40}}
+              minimumValue={1}
+              maximumValue={10}
+              step={1}
+              onValueChange={(value) => this.setState({stressLevel: value})}
+              minimumTrackTintColor="#c3d"
+              maximumTrackTintColor="#000"
+            />
+            
             <Text style={styles.buttonText}
               onPress={() => this.props.navigation.navigate('BreathingIntro')}>Breathing</Text>
         
