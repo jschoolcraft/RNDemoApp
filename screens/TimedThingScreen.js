@@ -72,7 +72,7 @@ class TimedThingScreen extends React.Component {
     if (this.state.currentCycle >= maxCycles) {
       clearInterval(this.interval)
       console.log('should navigate')
-      this.props.navigation.navigate('Finished')
+      this.props.navigation.navigate('Finished', {activity: 'foobar'})
       console.log('did navigate')
     } else {
       let timeOverall = this.state.timeOverall
